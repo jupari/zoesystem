@@ -1,0 +1,41 @@
+<div class="relative pt-8 pb-12 sm:pt-20 sm:pb-24 px-6 sm:px-16 overflow-hidden">
+    
+    <form [formGroup]="planBillingForm">
+        <!-- Section -->
+        <div class="w-full">
+            <div class="text-xl">Configuración sistema</div>
+            <div class="text-secondary">Actualice las diferentes tablas del sistema</div>
+        </div>
+        <div class="grid sm:grid-cols-4 gap-6 w-full mt-4">
+  
+            <mat-radio-group
+                class="invisible absolute w-0 h-0 pointer-events-none"
+                [formControlName]="'plan'"
+                #planRadioGroup="matRadioGroup">
+                <ng-container *ngFor="let plan of plans; trackBy: trackByFn">
+                    <mat-radio-button [value]="plan.value"></mat-radio-button>
+                </ng-container>
+            </mat-radio-group>
+            <ng-container *ngFor="let plan of plans; trackBy: trackByFn">
+                <div
+                    class="relative flex flex-col items-start justify-start p-6 rounded-md shadow cursor-pointer bg-card"
+                    [ngClass]="{'ring ring-inset ring-primary': planRadioGroup.value === plan.value}"
+                    (click)="planRadioGroup.value = plan.value">
+                    <ng-container *ngIf="planRadioGroup.value === plan.value">
+                        <mat-icon
+                            class="absolute top-0 right-0 mt-3 mr-3 icon-size-7 text-primary"
+                            [svgIcon]="'heroicons_solid:check-circle'"></mat-icon>
+                    </ng-container>
+                    <mat-icon class="mat-icon notranslate fuse-vertical-navigation-item-icon mat-icon-no-color ng-star-inserted mb-2" svgIcon="heroicons_outline:cog"></mat-icon>
+                    <div class="font-medium">{{plan.label}}</div>
+                    <div class="mt-1 whitespace-normal text-secondary">{{plan.details}}</div>
+                    <div class="flex-auto"></div>
+                    <div class="mt-8 text-lg">
+                        <span>{{plan.price | currency:'USD':'symbol':'1.0'}}</span>
+                        <span class="text-secondary"> / month</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </form>
+</div>
