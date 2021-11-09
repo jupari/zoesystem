@@ -1,0 +1,24 @@
+<div class="flex flex-col sm:flex-row items-center mb-1  w-full max-w-xs sm:max-w-none">
+    <mat-form-field class="w-full sm:w-60">
+        <mat-label># Docuemento</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field 
+        class="w-full sm:w-120 mt-2 sm:mt-0 sm:ml-2"
+        [ngClass]="formFieldHelpers">
+        <mat-label>Fecha</mat-label>
+        <input matInput
+               [matDatepicker]="picker2" 
+               [placeholder]="'Fecha Factura'"
+               >
+               <mat-datepicker-toggle
+               matSuffix
+               [for]="picker2"></mat-datepicker-toggle>
+           <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="w-full sm:w-110 mt-2 sm:mt-0 sm:ml-2">
+        <mat-label>Bodega</mat-label>
+        <input matInput>
+    </mat-form-field>
+</div>

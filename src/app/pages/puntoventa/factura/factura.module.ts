@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { FacturaComponent } from './factura.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './factura-routing.module';
 
+import { FacturaComponent } from './factura.component';
+import { MatFuseModule } from 'app/common/matfuse/matfuse.module';
+import { componentesModule } from 'app/pages/componentes/componentes.module';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { routes } from './factura-routing.module';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    componentesModule,
+    MatFuseModule
   ],
   exports:[
     RouterModule

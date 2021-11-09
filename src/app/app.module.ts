@@ -15,6 +15,7 @@ import { appRoutes } from 'app/app.routing';
 import { SettingModule } from './pages/settings/setting.module';
 
 
+
 const routerConfig: ExtraOptions = {
     scrollPositionRestoration: 'enabled',
     preloadingStrategy       : PreloadAllModules
@@ -23,6 +24,7 @@ const routerConfig: ExtraOptions = {
 @NgModule({
     declarations: [
         AppComponent
+
     ],
     imports     : [
         BrowserModule,
