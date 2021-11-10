@@ -8,6 +8,7 @@ import { MatFuseModule } from 'app/common/matfuse/matfuse.module';
 import { componentesModule } from 'app/pages/componentes/componentes.module';
 
 
+
 @NgModule({
   declarations: [
     FacturaComponent
@@ -15,8 +16,8 @@ import { componentesModule } from 'app/pages/componentes/componentes.module';
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    componentesModule,
-    MatFuseModule
+    MatFuseModule,
+    componentesModule
   ],
   exports:[
     RouterModule

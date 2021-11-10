@@ -33,6 +33,7 @@
         "@fullcalendar/moment": "4.4.2",
         "@fullcalendar/rrule": "4.4.2",
         "@fullcalendar/timegrid": "4.4.2",
+        "@ng-select/ng-select": "^7.4.0",
         "@ngneat/transloco": "2.21.0",
         "apexcharts": "3.27.1",
         "crypto-js": "3.3.0",

@@ -1,1 +1,17 @@
-<p>seleccioncliente works!</p>
+<mat-label>Cliente</mat-label>
+<ng-select [items]="accounts"
+        bindLabel="name"
+        bindValue="name"
+        placeholder="Seleccione el Cliente"
+        [groupBy]="groupByFn"
+        [groupValue]="groupValueFn"
+        [(ngModel)]="selectedAccounts"
+        class="fuse-mat-dense w-full sm:w-290 sm:mt-0 ">
+    <ng-template ng-optgroup-tmp let-item="item">
+        <span style="vertical-align: middle;">{{item.name}}</span>
+        <span class="ml-1 badge badge-secondary">{{item.total}}</span>
+    </ng-template>
+</ng-select>
+
+
+

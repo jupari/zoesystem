@@ -49,7 +49,7 @@
         }
 
         .mat-expansion-panel-header {
-            font-size: 14px;
+            font-size: 12px;
 
             &[aria-disabled=true] {
 
@@ -599,13 +599,13 @@
 
                     .mat-icon {
                         margin: 0 !important;
-                        @apply icon-size-6;
+                        @apply icon-size-5;
                     }
                 }
 
                 /* Datepicker default icon size */
                 .mat-datepicker-toggle-default-icon {
-                    @apply icon-size-6;
+                    @apply icon-size-5;
                 }
 
                 /* Make mat-select usable as prefix and suffix */
@@ -743,7 +743,7 @@
                         margin-top: 0;
                         backface-visibility: hidden;
                         transition: none;
-                        font-weight: 500;
+                        font-weight:400;
                         @apply text-default #{'!important'};
                     }
                 }
@@ -762,7 +762,7 @@
             padding: 0;
             margin-top: 0;
             font-size: 12px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 1;
 
             > div {
@@ -893,16 +893,16 @@
         .mat-form-field-wrapper {
 
             .mat-form-field-flex {
-                min-height: 40px;
+                min-height: 30px;
 
                 .mat-form-field-prefix,
                 .mat-form-field-suffix {
 
                     .mat-icon-button {
-                        width: 32px;
-                        min-width: 32px;
-                        height: 32px;
-                        min-height: 32px;
+                        width: 22px;
+                        min-width: 22px;
+                        height: 22px;
+                        min-height: 22px;
                     }
                 }
 
@@ -925,7 +925,7 @@
                 .mat-form-field-infix {
 
                     .mat-input-element {
-                        padding: 11px 0;
+                        padding: 8px 0;
                     }
                 }
             }
@@ -1077,12 +1077,12 @@
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    min-width: 24px;
-    height: 24px;
-    min-height: 24px;
-    font-size: 24px;
-    line-height: 24px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    font-size: 20px;
+    line-height: 20px;
     -webkit-appearance: none !important;
 }
 
